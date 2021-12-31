@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form đơn giản</title>
+    <style type="text/css">
+        h1{
+            font-size: 30px;
+            color: white;
+            background-color: orange;
+            text-align: center
+        }
+        h2{
+            font-size: 30px;
+            color: blue;
+            background-color: aquamarine
+        }
+    </style>
+</head>
+<body>
+<form method="get" action="FormDonGian.html">
+<fieldset>
+    <h1>SỞ THÍCH CỦA BẠN</h1>
+    <table>
+        <tr>
+            <th style="color: blue">Họ và tên</th>
+            <td><input type=" text" name="yourname" size="40"</td>
+        </tr>
+        <tr>
+            <th style="color: blue">Email</th>
+            <td><input type=" text" name="email" size="40"</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th style="color: blue">Sở thích</th>
+            <td style="color: orange"><label><input name="hobby" value="sport" type="checkbox"/>Thể thao</label></td>
+            <td style="color: orange"><label><input name="hobby" value="music" type="checkbox"/>Âm nhạc</label></td>
+            <td style="color: orange"><label><input name="hobby" value="read" type="checkbox"/>Đọc sách</label></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td style="color: orange"><label><input name="hobby" value=" " type="checkbox"/>Lướt Web</label></td>
+            <td style="color: orange"><label><input name="hobby" value=" " type="checkbox"/>Chơi game</label></td>
+            <td style="color: orange"><label><input name="hobby" value=" " type="checkbox"/>Điện ảnh</label></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td style="color: orange"><label><input name="hobby" value="  " type="checkbox"/>Du lịch</label></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Gửi thông tin"/></td>
+            <td><input type="reset" value="Nhập lại"/></td>
+        </tr>
+    </table>
+</fieldset>
+</form>
+<form method="post" action="FormDonGian.html">
+    <fieldset style="background-color: yellow">
+        <h2>ĐĂNG KÝ HỌC VIÊN</h2>
+        <table>
+            <tr>
+                <th style="color: darkblue">Họ và tên</th>
+                <td><input type="text" name="yourname" size="40"</td>
+            </tr>
+            <tr>
+                <th style="color: darkblue">Ngày sinh</th>
+                <td><input type="text" name="day" size="40"</td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th style="color: darkblue">Giới tính</th>
+                <td><label><input name="gender" type="radio">Nam</label></td>
+                <td><label><input name="gender" type="radio">Nữ</label></td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th style="color: darkblue">Điện thoại</th>
+                <td><input type="number" name="phone"</td>
+            </tr>
+            <tr>
+                <th style="color: darkblue">Địa chỉ</th>
+                <td><textarea cols="50" rows="4"></textarea></td>
+            </tr>
+            <tr>
+                <th style="color: darkblue">Lớp</th>
+                <td><select name="class">
+                    <option value="class">-Chọn lớp-</option>
+                    <option value="class"></option>
+                    <option value="class"></option>
+                    <option value="class"></option>
+                </select>
+                </td>
+            </tr>
+            <tr>
+                <th style="color: darkblue">Email</th>
+                <td><input type="text" name="email" size="40"</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Đăng ký"/></td>
+                <td><input type="reset" value="Nhập lại"/></td>
+            </tr>
+        </table>
+    </fieldset>
+</form >
+</body>
+</html>
