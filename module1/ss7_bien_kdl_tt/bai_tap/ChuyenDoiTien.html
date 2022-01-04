@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền</title>
+</head>
+<body>
+<center><h1> Chuyển đổi tiền</h1></center>
+<form>
+    <table width="100%">
+        <tr>
+            <td>Amount</td>
+            <td>Form Curency</td>
+            <td>To Curency</td>
+        </tr>
+        <tr>
+            <td><input type="number" id="Money1"></td>
+            <td><select name="" id="$">
+                <option value="VND">VND</option>
+                <option value="USD">USD</option>
+            </select>
+            </td>
+            <td><select name="1" id="$1">
+                <option value="VND">VND</option>
+                <option value="USD">USD</option>
+            </select>
+            </td>
+        </tr>
+    </table><br>
+    <div id="messageDiv"></div>
+    <button type="button" onclick="showResult()">Convert</button>
+</form>
+</body>
+<script>
+    function showResult() {
+        let inputMoney = document.getElementById('Money1').value;
+        let select1 = document.getElementById('$').value;
+        let select2 = document.getElementById('$1').value;
+        if (select1 == select2) {
+            document.getElementById('messageDiv').innerHTML = inputMoney
+        }
+        if (select1 == 'VND' && select2 == 'USD') {
+            Tien = inputMoney / 23000;
+            document.getElementById('messageDiv').innerHTML = Tien;
+        }
+        if (select1 == 'USD' && select2 == 'VND') {
+            Tien2 = inputMoney * 23000;
+            document.getElementById('messageDiv').innerHTML = Tien2;
+        }
+    }
+
+</script>
+</html>

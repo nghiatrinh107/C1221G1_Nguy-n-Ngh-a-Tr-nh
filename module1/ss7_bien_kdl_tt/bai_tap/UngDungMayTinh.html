@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính</title>
+</head>
+<body>
+<h1>Caculator</h1>
+<input type="number" name="" id="v1" size="500px">
+<input type="number" name="" id="v2" size="500px"><br>
+<button type="button" onclick="Addition()">Addition(+)</button>
+<button type="button" onclick="Subtraction()">Subtraction(-)</button>
+<button type="button" onclick="Multiplication()">Multiplication(X)</button>
+<button type="button" onclick="Division()">Division(/)</button><br>
+<div id="messageDiv"></div>
+</body>
+<script>
+    function Addition() {
+    let number1 = document.getElementById('v1').value;
+    let number2 = document.getElementById('v2').value;
+    a = parseFloat(number1);
+    b = parseFloat(number2);
+    c = a + b;
+        document.getElementById('messageDiv').innerHTML = c;
+    }
+    function Subtraction() {
+        let number1 = document.getElementById('v1').value;
+        let number2 = document.getElementById('v2').value;
+        a = parseFloat(number1);
+        b = parseFloat(number2);
+        c = a - b;
+        document.getElementById('messageDiv').innerHTML = c;
+    }
+    function Multiplication() {
+        let number1 = document.getElementById('v1').value;
+        let number2 = document.getElementById('v2').value;
+        a = parseFloat(number1);
+        b = parseFloat(number2);
+        c = a * b;
+        document.getElementById('messageDiv').innerHTML = c;
+    }
+    function Division() {
+        let number1 = document.getElementById('v1').value;
+        let number2 = document.getElementById('v2').value;
+        a = parseFloat(number1);
+        b = parseFloat(number2);
+        c = a / b;
+        document.getElementById('messageDiv').innerHTML = c;
+    }
+</script>
+</html>
