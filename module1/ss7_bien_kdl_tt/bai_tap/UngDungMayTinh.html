@@ -8,14 +8,14 @@
 <h1>Caculator</h1>
 <input type="number" name="" id="v1" size="500px">
 <input type="number" name="" id="v2" size="500px"><br>
-<button type="button" onclick="Addition()">Addition(+)</button>
-<button type="button" onclick="Subtraction()">Subtraction(-)</button>
-<button type="button" onclick="Multiplication()">Multiplication(X)</button>
-<button type="button" onclick="Division()">Division(/)</button><br>
+<button type="button" onclick="addition()">addition(+)</button>
+<button type="button" onclick="subtraction()">subtraction(-)</button>
+<button type="button" onclick="multiplication()">multiplication(X)</button>
+<button type="button" onclick="division()">division(/)</button><br>
 <div id="messageDiv"></div>
 </body>
 <script>
-    function Addition() {
+    function addition() {
     let number1 = document.getElementById('v1').value;
     let number2 = document.getElementById('v2').value;
     a = parseFloat(number1);
@@ -23,7 +23,7 @@
     c = a + b;
         document.getElementById('messageDiv').innerHTML = c;
     }
-    function Subtraction() {
+    function subtraction() {
         let number1 = document.getElementById('v1').value;
         let number2 = document.getElementById('v2').value;
         a = parseFloat(number1);
@@ -31,7 +31,7 @@
         c = a - b;
         document.getElementById('messageDiv').innerHTML = c;
     }
-    function Multiplication() {
+    function multiplication() {
         let number1 = document.getElementById('v1').value;
         let number2 = document.getElementById('v2').value;
         a = parseFloat(number1);
@@ -39,7 +39,7 @@
         c = a * b;
         document.getElementById('messageDiv').innerHTML = c;
     }
-    function Division() {
+    function division() {
         let number1 = document.getElementById('v1').value;
         let number2 = document.getElementById('v2').value;
         a = parseFloat(number1);
