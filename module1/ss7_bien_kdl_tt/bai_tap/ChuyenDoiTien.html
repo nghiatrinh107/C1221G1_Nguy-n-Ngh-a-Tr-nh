@@ -15,12 +15,12 @@
         </tr>
         <tr>
             <td><input type="number" id="Money1"></td>
-            <td><select name="" id="$">
+            <td><select name="" id="tien">
                 <option value="VND">VND</option>
                 <option value="USD">USD</option>
             </select>
             </td>
-            <td><select name="1" id="$1">
+            <td><select name="1" id="tien1">
                 <option value="VND">VND</option>
                 <option value="USD">USD</option>
             </select>
@@ -34,16 +34,14 @@
 <script>
     function showResult() {
         let inputMoney = document.getElementById('Money1').value;
-        let select1 = document.getElementById('$').value;
-        let select2 = document.getElementById('$1').value;
+        let select1 = document.getElementById('tien').value;
+        let select2 = document.getElementById('tien1').value;
         if (select1 == select2) {
             document.getElementById('messageDiv').innerHTML = inputMoney
-        }
-        if (select1 == 'VND' && select2 == 'USD') {
+        } else if (select1 == 'VND' && select2 == 'USD') {
             Tien = inputMoney / 23000;
             document.getElementById('messageDiv').innerHTML = Tien;
-        }
-        if (select1 == 'USD' && select2 == 'VND') {
+        } else {
             Tien2 = inputMoney * 23000;
             document.getElementById('messageDiv').innerHTML = Tien2;
         }

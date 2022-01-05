@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<body>
+<h1>Caculator</h1>
+<input type="number" name="" id="v3" size="500px">
+<input type="number" name="" id="v4" size="500px"><br>
+<button type="button" onclick="tinh('+')">Addition(+)</button>
+<button type="button" onclick="tinh('-')">Subtraction(-)</button>
+<button type="button" onclick="tinh('*')">Multiplication(X)</button>
+<button type="button" onclick="tinh('/')">Division(/)</button><br>
+<div id="messageDiv"></div>
+</body>
+<script>
+    function tinh(n1) {
+        let number1 = parseInt(document.getElementById('v3').value);
+        let number2 = parseInt(document.getElementById('v4').value);
+        if (n1=='+') {
+            a = number1 + number2;
+            document.getElementById('messageDiv').innerText = a ;
+        } else if (n1=='-') {
+            a = number1 - number2;
+            document.getElementById('messageDiv').innerText = a ;
+        } else if (n1=='*') {
+            a = number1 * number2;
+            document.getElementById('messageDiv').innerText =a;
+        }else {
+            a = number1 / number2;
+            document.getElementById('messageDiv').innerText =a;
+        }
+    }
+</script>
+
+</body>
+</html>
