@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính giá điện</title>
+</head>
+<body>
+<script>
+    let soDien = parseInt(prompt('Số điện:'));
+    let bac1 = 1678 ;
+    let bac2 = 1734 ;
+    let bac3 = 2014 ;
+    let bac4 = 2536 ;
+    let bac5 = 2834 ;
+    let bac6 = 2927 ;
+    if (soDien <= 0) {
+        alert('Số điện lớn hơn 0')
+    } else if (soDien <= 50) {
+        alert('Số tiền điện là:  ' + soDien*bac1 + 'VND')
+    }else if (soDien <=100) {
+        alert('Số tiền điện là:  '  + (50*bac1+(soDien-50)*bac2) + 'VND')
+    }else if (soDien <=200) {
+        alert('Số tiền điện là:  '  + (50*bac1+50*bac2+(soDien-100)*bac3) + 'VND')
+    }else if (soDien <=300) {
+        alert('Số tiền điện là:  '  + (50*bac1+50*bac2+100*bac3+(soDien-200)*bac4) + 'VND')
+    }else if (soDien <=400) {
+        alert('Số tiền điện là:  '  + (50*bac1+50*bac2+100*bac3+100*bac4+(soDien-300)*bac5) + 'VND')
+    }else {
+        alert('Số tiền điện là:  '  + (50*bac1+50*bac2+100*bac3+100*bac4+100*bac5+(soDien-400)*bac6) + 'VND')
+    }
+</script>
+</body>
+</html>

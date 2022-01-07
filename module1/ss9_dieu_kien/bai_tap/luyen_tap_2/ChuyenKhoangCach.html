@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi từ M sang Feet</title>
+</head>
+<body>
+<table width="100%">
+    <tr>
+        <td><input type="number" id="KhoangCach"></td>
+        <td><select  id="LuaChon1">
+            <option value="Met">M</option>
+            <option value="Feet">Feet</option>
+        </select>
+        </td>
+        <td><select  id="LuaChon2">
+            <option value="Met">M</option>
+            <option value="Feet">Feet</option>
+        </select>
+        </td>
+    </tr>
+</table><br>
+<div id="messageDiv"></div>
+<button type="button" onclick="showResult()">Convert</button>
+</body>
+<script>
+    function showResult() {
+        let inputKhoangCach = parseFloat(document.getElementById('KhoangCach').value);
+        let select1 = document.getElementById('LuaChon1').value;
+        let select2 = document.getElementById('LuaChon2').value;
+        if (select1 == select2) {
+            document.getElementById('messageDiv').innerHTML = inputKhoangCach;
+        } else if (select1 == 'Met'&& select2 == 'Feet') {
+            document.getElementById('messageDiv').innerHTML = inputKhoangCach * 3.2808 ;
+        }else {
+            document.getElementById('messageDiv').innerHTML = inputKhoangCach / 3.2808;
+        }
+    }
+</script>
+</html>

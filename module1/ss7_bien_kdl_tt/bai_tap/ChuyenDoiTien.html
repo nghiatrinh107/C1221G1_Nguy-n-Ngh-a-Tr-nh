@@ -39,11 +39,11 @@
         if (select1 == select2) {
             document.getElementById('messageDiv').innerHTML = inputMoney
         } else if (select1 == 'VND' && select2 == 'USD') {
-            Tien = inputMoney / 23000;
-            document.getElementById('messageDiv').innerHTML = Tien;
+            let tien = inputMoney / 23000;
+            document.getElementById('messageDiv').innerHTML = tien;
         } else {
-            Tien2 = inputMoney * 23000;
-            document.getElementById('messageDiv').innerHTML = Tien2;
+            let tien2 = inputMoney * 23000;
+            document.getElementById('messageDiv').innerHTML = tien2;
         }
     }
 

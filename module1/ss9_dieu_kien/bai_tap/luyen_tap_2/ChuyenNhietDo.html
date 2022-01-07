@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển Nhiệt Độ</title>
+</head>
+<body>
+<form>
+    <table width="100%">
+        <tr>
+            <td><input type="number" id="NhietDo"></td>
+            <td><select  id="LuaChon1">
+                <option value="DoC">ĐỘ C</option>
+                <option value="DoF">Độ F</option>
+            </select>
+            </td>
+            <td><select  id="LuaChon2">
+                <option value="DoC">Độ C</option>
+                <option value="DoF">Đọ F</option>
+            </select>
+            </td>
+        </tr>
+    </table><br>
+    <div id="messageDiv"></div>
+    <button type="button" onclick="showResult()">Convert</button>
+</form>
+</body>
+<script>
+    function showResult() {
+        let inputNhietDo = parseInt(document.getElementById('NhietDo').value);
+        let select1 = document.getElementById('LuaChon1').value;
+        let select2 = document.getElementById('LuaChon2').value;
+        if (select1 == select2) {
+            document.getElementById('messageDiv').innerHTML = inputNhietDo;
+        } else if (select1 == 'DoC'&& select2 == 'DoF') {
+            document.getElementById('messageDiv').innerHTML = inputNhietDo * (9/5) +32;
+        }else {
+            document.getElementById('messageDiv').innerHTML = ( inputNhietDo -32 )/( 9/5 );
+        }
+    }
+
+</script>
+</html>

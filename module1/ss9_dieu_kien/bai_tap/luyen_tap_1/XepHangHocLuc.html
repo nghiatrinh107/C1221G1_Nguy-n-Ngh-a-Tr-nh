@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp hạng học lực</title>
+</head>
+<body>
+<script>
+    let heSo1 = parseInt(prompt('Điểm kiểm tra'));
+    let giuaKi = parseInt(prompt('Điểm giữa kì'));
+    let cuoiKi = parseInt(prompt('Điểm cuối kì'));
+    gpa = (heSo1 + giuaKi * 2 + cuoiKi * 4) / 7;
+    if (gpa >= 8) {
+        alert('Loại giỏi')
+    }else if (gpa >= 6.5){
+        alert('Loại khá')
+    }else if (gpa >= 5) {
+        alert('Loai trung bình')
+    }else if (gpa >= 3.5) {
+        alert('Loại yếu')
+    }else {
+        alert('Loại kém')
+    }
+</script>
+</body>
+</html>

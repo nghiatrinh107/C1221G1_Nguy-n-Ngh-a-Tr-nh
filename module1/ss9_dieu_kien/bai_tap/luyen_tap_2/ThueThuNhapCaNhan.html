@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thuế thu nhập cá nhân</title>
+</head>
+<body>
+<script>
+    let thuNhap = parseInt(prompt("Thu nhập: "));
+    if (thuNhap <=0) {
+        alert('Nhập số lớn hơn 0');
+    }else if (thuNhap <= 5000000) {
+        alert('Thuế thu nhâp cá nhân:  ' + thuNhap*0.05 + 'VND')
+    }else if (thuNhap <= 10000000) {
+        alert('Thuế thu nhập cá nhân:   ' + thuNhap*0.1 +'VND')
+    }else if (thuNhap <= 18000000) {
+        alert('Thuế thu nhập cá nhân:   ' + thuNhap * 0.15 + 'VND')
+    }else if (thuNhap <= 32000000) {
+        alert('Thuế thu nhập cá nhân:   ' + thuNhap * 0.20 + 'VND')
+    }else if (thuNhap <= 52000000) {
+        alert('Thuế thu nhập cá nhân:   ' + thuNhap * 0.25 + 'VND')
+    }else if (thuNhap <= 80000000) {
+        alert('Thuế thu nhập cá nhân:   ' + thuNhap * 0.3 + 'VND')
+    }else {
+        alert('Thuế thu nhập cá nhân:   ' + thuNhap * 0.35 + 'VND')
+    }
+</script>
+</body>
+</html>

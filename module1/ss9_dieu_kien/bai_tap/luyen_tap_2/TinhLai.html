@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính lãi</title>
+</head>
+<body>
+<script>
+    let tienVay = parseInt(prompt('Tiền gửi:'));
+    let thang = parseInt(prompt('Số tháng gửi'));
+    if (thang < 5) {
+        alert('Số tiền lãi:  ' + tienVay * 0.02);
+    }else if (thang < 10) {
+        alert('Số tiền lãi:   ' + ((tienVay * 0.02)+tienVay)*0.03 );
+    }else {
+        alert('Số tiền lãi:   ' + (tienVay * 0))
+    }
+</script>
+</body>
+</html>
