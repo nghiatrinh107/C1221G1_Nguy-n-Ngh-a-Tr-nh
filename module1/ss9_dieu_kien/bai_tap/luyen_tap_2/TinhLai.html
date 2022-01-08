@@ -9,11 +9,11 @@
     let tienVay = parseInt(prompt('Tiền gửi:'));
     let thang = parseInt(prompt('Số tháng gửi'));
     if (thang < 5) {
-        alert('Số tiền lãi:  ' + tienVay * 0.02);
+        alert('Số tiền lãi:  ' + tienVay * 0.03);
     }else if (thang < 10) {
-        alert('Số tiền lãi:   ' + ((tienVay * 0.02)+tienVay)*0.03 );
+        alert('Số tiền lãi:   ' + ((tienVay * 0.02)+tienVay)*0.06 );
     }else {
-        alert('Số tiền lãi:   ' + (tienVay * 0))
+        alert('Số tiền lãi:   ' + ((((tienVay * 0.02)+tienVay)*0.03 )+tienVay)*0.1)
     }
 </script>
 </body>
