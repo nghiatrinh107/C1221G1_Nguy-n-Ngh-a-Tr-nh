@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let count = 0;
+    let tong = 0;
+    let i = 1;
+    let text= '';
+    while (count <= 30) {
+        if(i%7 == 0) {
+            text += i + '<br>'
+            count += 1;
+            tong += i;
+        }
+        i++
+    }
+    document.write(text)
+    document.write(tong)
+
+</script>
+</body>
+</html>

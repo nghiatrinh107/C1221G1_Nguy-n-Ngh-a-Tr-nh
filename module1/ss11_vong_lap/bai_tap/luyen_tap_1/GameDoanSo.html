@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let phamVi = prompt("Trò chơi đoán số từ 0 - ");
+    let nhapSo = prompt("Nhập vào số muốn đoán");
+    let soRamdom = Math.floor(Math.random()*phamVi);
+    let count = 0;
+        if(soRamdom == nhapSo){
+            alert("Bạn đã đoán đúng")
+        } else {
+            while (soRamdom != nhapSo ){
+                count++;
+                if ( count<3) {
+                    alert("Bạn đoán sai"+soRamdom)
+                    nhapSo = prompt("Nhập vào số muốn đoán")
+                }else {
+                    alert('Nhập quá ba lần');
+                    break;
+                }
+            }alert("Bạn đã đoán đúng")
+        }
+
+
+</script>
+</body>
+</html>
