@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let myColor = ["Red", "Green", "White", "Black"];
+    // document.write(myColor+"<br>");
+    // document.write(myColor.join("+"));
+
+
+
+    // let daySo= prompt("Nhập vào dẫy số");
+    // let mang = [daySo[0]];
+    // for(let i=1; i<=daySo.length;i++){
+    //     if(daySo[i-1] %2 == 0 && daySo[i] %2 == 0){
+    //         mang.push("-"+ daySo[i]);
+    //     }else{
+    //         mang.push(daySo[i]);
+    //     }
+    // }
+    // document.write(mang.join(""));
+
+
+
+
+    let chuoi = prompt("Nhập vào một chuỗi");
+    let chuHoa = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let chuThuong = "abcdefghijklmnopqrstuvwxyz";
+    let ketQua = []
+    for (let i=0; i<chuoi.length; i++){
+        if(chuHoa.indexOf(chuoi[i]) !== -1){
+            ketQua.push(chuoi[i].toLowerCase());
+        }else if(chuThuong.indexOf(chuoi[i] !== -1)){
+            ketQua.push(chuoi[i].toUpperCase());
+        }else {
+            ketQua.push(chuoi[i]);
+        }
+    }
+    alert(ketQua.join(""));
+
+
+</script>
+</body>
+</html>
