@@ -5,6 +5,30 @@
     <title>Title</title>
 </head>
 <body>
+<input type="text" id="tienganh" >
 
+<input type="button" value="Dịch" onclick="dich()">
+<br><br>
+<p id="tiengviet" />
 </body>
+<script>
+    let tiengAnh = document.getElementById("tienganh")
+    let mangAnh = ["how", "old", "are", "you", "i", "am", "fine", "thanks"]
+    let mangViet = ["làm sao", "cũ", "là", "bạn", "tôi", "là", "khỏe", "cảm ơn"]
+    let dem =0
+    function dich() {
+        for (let i=0; i<mangAnh.length; i++) {
+            if (mangAnh[i] == tiengAnh.value) {
+                dem=0
+                document.getElementById("tiengviet").innerHTML = mangViet[i];
+                break;
+            }else{
+                dem++;
+            }
+        }
+        if(dem != 0){
+            alert("Không có dữ liệu");
+        }
+    }
+</script>
 </html>

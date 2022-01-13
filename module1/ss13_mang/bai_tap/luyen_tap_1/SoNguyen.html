@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let nhapSo = [];
+    let soHon10 = [];
+    for (let i=0 ; i<10 ; i++) {
+        nhapSo[i]= prompt('Nhập số của mảng');
+    } document.write('Mảng số = [' + nhapSo + '] <br>');
+    for (let i=0 ; i<nhapSo.length; i++) {
+        if (nhapSo[i] >= 10) {
+            soHon10.push(nhapSo[i]);
+        }
+    } document.write('Mảng số lớn hơn 10 = [' + soHon10 + ']');
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let nhapSo1= [];
+    let nhapSo2= [];
+    let mang3= [];
+    for (let i = 0; i <10 ; i++) {
+        nhapSo1[i]= prompt('Nhập mảnh 1');
+    }document.write('Mảng số 1 ['+ nhapSo1 +'] <br>');
+    for (let i = 0; i <10 ; i++) {
+        nhapSo2[i]= prompt('Nhập mảnh 2');
+    }document.write('Mảng số 2 ['+ nhapSo2 +'] <br>');
+    mang3 = nhapSo1.concat(nhapSo2);
+    document.write('Mảng mới kết hợp 2 mảng ['+ mang3 + ']');
+
+</script>
+</body>
+</html>

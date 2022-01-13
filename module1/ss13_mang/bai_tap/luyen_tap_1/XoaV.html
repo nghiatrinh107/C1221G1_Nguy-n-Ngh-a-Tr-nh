@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [1,2,2,3,5,6,2,7,8];
+    let nhapSo = prompt('Nhập số cần xóa:');
+    for (let i = 0; i <arr.length ; i++) {
+        if(nhapSo==arr[i]){
+            for (let j = i; j <arr.length-1 ; j++) {
+                arr[j]=arr[j+1];
+            }
+            arr[arr.length-1]=0;
+            i--;
+        }
+    }document.write('Mảng được xóa:[' + arr + ']');
+</script>
+</body>
+</html>

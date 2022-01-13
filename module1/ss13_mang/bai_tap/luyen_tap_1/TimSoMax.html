@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let nhapSo = [];
+    let max = 0 ;
+    let viTri = 0 ;
+    for (let i=0 ; i<10 ; i++) {
+        nhapSo[i]= parseInt(prompt('Nhập số của mảng'));
+    } document.write('Mảng số = [' + nhapSo + '] <br>');
+    for (let i=0 ; i<nhapSo.length ; i++) {
+        if (max < nhapSo[i]) {
+            max = nhapSo[i];
+            viTri = i ;
+        }
+    } document.write('Số lớn nhất là :  ' + max + 'Vị trí thứ' + viTri + 'trong mảng');
+</script>
+</body>
+</html>

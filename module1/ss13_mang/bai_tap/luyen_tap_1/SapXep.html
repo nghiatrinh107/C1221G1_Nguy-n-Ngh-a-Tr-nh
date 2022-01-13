@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let nhapSo = [];
+    for (let i=0 ; i<10 ; i++) {
+        nhapSo[i]= prompt('Nhập số của mảng');
+        nhapSo.sort(function (x,y) {
+            return x-y ;
+        })
+    } document.write('Mảng số = [' + nhapSo + '] <br>');
+
+</script>
+</body>
+</html>
