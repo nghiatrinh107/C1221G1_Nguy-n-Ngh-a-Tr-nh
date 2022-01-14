@@ -6,11 +6,14 @@
 </head>
 <body>
 <script>
-    let mang = ["Xin", "chào", "tôi", "tên", "Trình"]
-    document.write("Mảng gồm = ["+mang+"]<br>")
+    let mang = ["a", 12, 5, "g", "h",456];
+    let count = 0;
+    document.write("Mảng gồm = ["+mang+"]<br>");
     for (let i=0; i<mang.length; i++){
-        document.write("Chuỗi "+mang[i]+" có "+mang[i].length+" ký tự trong mảng <br>")
-    }
+        if(mang[i]%2==0 || mang[i]%2==1){
+            count++;
+        }
+    }document.write("Số lượng số trong văn bản là :  " + count);
 </script>
 </body>
 </html>

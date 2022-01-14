@@ -15,14 +15,12 @@
         document.write("2 chuỗi không giống nhau");
     }else{
         for (let i=0; i<chuoi1.length ; i++){
-            for (let j=0; j<chuoi2.length ; j++){
-                if (chuoi1[i] == chuoi2[j]){
+                if (chuoi1[i] == chuoi2[i]){
                     flag = true;
                 }else{
                     flag = false;
                 }
             }
-        }
         if (flag == false){
             document.write("2 chuỗi không giống nhau" );
         }else{

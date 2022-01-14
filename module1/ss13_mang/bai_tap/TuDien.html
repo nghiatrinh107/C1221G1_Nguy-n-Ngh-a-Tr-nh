@@ -12,14 +12,14 @@
 <p id="tiengviet" />
 </body>
 <script>
-    let tiengAnh = document.getElementById("tienganh")
-    let mangAnh = ["how", "old", "are", "you", "i", "am", "fine", "thanks"]
-    let mangViet = ["làm sao", "cũ", "là", "bạn", "tôi", "là", "khỏe", "cảm ơn"]
-    let dem =0
+    let tiengAnh = document.getElementById("tienganh");
+    let mangAnh = ["how", "old", "are", "you", "i", "am", "fine", "thanks"];
+    let mangViet = ["làm sao", "cũ", "là", "bạn", "tôi", "là", "khỏe", "cảm ơn"];
+    let dem =0;
     function dich() {
         for (let i=0; i<mangAnh.length; i++) {
             if (mangAnh[i] == tiengAnh.value) {
-                dem=0
+                dem=0;
                 document.getElementById("tiengviet").innerHTML = mangViet[i];
                 break;
             }else{
