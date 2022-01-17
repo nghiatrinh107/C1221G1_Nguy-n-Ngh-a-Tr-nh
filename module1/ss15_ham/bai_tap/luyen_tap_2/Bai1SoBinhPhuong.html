@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    <label>Tính bình phương</label>
+    <input id="nhapso" type="number" placeholder="Nhập số"
+           oninput="binhPhuong(this.value)"
+           onchange="binhPhuong(this.value)">
+</p>
+<p>Số bình phương: <span id="sobinhphuong"></span></p>
+</body>
+<script>
+
+    function binhPhuong(so) {
+        so = parseFloat(so);
+        document.getElementById("sobinhphuong").innerHTML = so * so;
+    }
+
+</script>
+</body>
+</html>

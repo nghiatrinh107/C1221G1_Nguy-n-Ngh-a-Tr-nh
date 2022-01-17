@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let soA = prompt('Nhập số a');
+    let soB = prompt('Nhập số b');
+    let ketQua = doi(soA,soB);
+    alert('a = ' + soA +' và ' + 'b = ' + soB);
+    alert(ketQua);
+    function doi(a,b) {
+        let soSanh = a;
+        a = b;
+        b = soSanh;
+        return 'a = ' + a +' và ' + 'b = ' + b;
+    }
+
+</script>
+</body>
+</html>

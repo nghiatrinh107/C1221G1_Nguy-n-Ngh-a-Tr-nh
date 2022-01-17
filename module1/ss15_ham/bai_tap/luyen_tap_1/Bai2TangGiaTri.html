@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="alertNumber()">
+<script>
+    function alertNumber() {
+        let nhapSo = parseInt(prompt('Nhập số: '));
+        let ketQua = tangGiaTri(nhapSo);
+        alert(ketQua);
+        return ketQua;
+    }
+    function tangGiaTri(number) {
+        number++;
+        return number;
+    }
+</script>
+
+</body>
+</html>

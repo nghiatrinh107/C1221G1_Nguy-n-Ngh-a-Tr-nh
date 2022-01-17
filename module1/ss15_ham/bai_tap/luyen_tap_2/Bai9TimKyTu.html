@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body >
+<script>
+    let arr = ['a','g','7','8','q','g','a','q','a','8','8','8'];
+    let kyTuCanTim1 = prompt('Nhập ký tự cần tìm :');
+    let ketQua =timKiem(arr,kyTuCanTim1)
+    alert(ketQua)
+    function timKiem(arr1,kyTuCanTim) {
+        let dem = 0;
+        for (let i = 0; i <arr.length ; i++) {
+            if (kyTuCanTim == arr[i]) {
+                dem ++
+            }
+        }if (dem > 0){
+            return dem;
+        }else {
+            return -1;
+        }
+    }
+</script>
+</body>
+</html>

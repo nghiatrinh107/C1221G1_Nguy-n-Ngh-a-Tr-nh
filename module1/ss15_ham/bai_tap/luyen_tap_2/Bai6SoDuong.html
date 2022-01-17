@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let nhapSo = parseInt(prompt('Nhập số cần kiểm tra:'));
+    let ketQua = soDuong(nhapSo);
+    alert(ketQua)
+    function soDuong(so) {
+        if (so == 0) {
+            return 'Số 0';
+        }else if (so < 0) {
+            return false;
+        }else {
+            return  true;
+        }
+    }
+</script>
+</body>
+</html>

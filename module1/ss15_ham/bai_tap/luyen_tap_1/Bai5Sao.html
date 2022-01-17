@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="ketQua()">
+</body>
+<script>
+
+    function timKiem(str) {
+        let sao = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+        let chomSao = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major' , 'Leo'];
+        for (let i = 0; i <sao.length ; i++) {
+            if (str == sao[i]) {
+                return chomSao[i];
+            }
+        } return ""
+    }
+    function ketQua() {
+        let nhapSao = prompt('Nhập sao muốn tìm: ');
+        let timSao = timKiem(nhapSao);
+        if (timSao == "") {
+            alert('Không có dữ liệu');
+        }else {
+            alert(nhapSao + ' thuộc chòm sao '+timSao);
+        }
+    }
+
+</script>
+</html>

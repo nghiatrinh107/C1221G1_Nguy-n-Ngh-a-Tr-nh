@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    <label>Tính bình phương</label>
+    <input id="nhapso" type="number" placeholder="Nhập bán kính"
+           oninput="tinhHinhTron(this.value)"
+           onchange="tinhHinhTron(this.value)">
+</p>
+<p>Diện tích hình tròn: <span id="dientich"></span></p>
+<p>Chu vi hình tròn: <span id="chuvi"></span></p>
+</body>
+<script>
+
+    function tinhHinhTron(so) {
+        so = parseFloat(so);
+        document.getElementById("dientich").innerHTML = so * so * 3.14;
+        document.getElementById("chuvi").innerHTML = so * 2 * 3.14;
+    }
+
+</script>
+</body>
+</html>

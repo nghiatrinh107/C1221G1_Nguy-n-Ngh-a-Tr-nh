@@ -5,8 +5,33 @@
     <title>Title</title>
 </head>
 <body>
-<script>
-
-</script>
+<h1>Kiểm tra số nguyên tố</h1>
+<input type="number" id="nhapso">
+<input type="button" value="Kiểm tra" onclick="soNguyenTo()">
 </body>
+<script>
+    function isPrime(number) {
+        if(number<=1) return false
+        else if(number == 2) return true
+        else if(number %2 == 0 )return false
+        else {
+            for (i=2; i<number; i++){
+                if(number%i == 0){
+                    return false
+                }
+            }
+        }
+
+        return true
+    }
+    function soNguyenTo() {
+        let so = document.getElementById("nhapso");
+        let kiemTra = isPrime(so.value);
+        if(kiemTra){
+            alert(so.value+ " là một số nguyên tố");
+        }else{
+            alert(so.value+ " không phải số nguyên tố");
+        }
+    }
+</script>
 </html>

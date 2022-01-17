@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body >
+<script>
+    let chuoi1 = prompt('Nhập chuỗi :');
+    let kiemTra = doiXung(chuoi1)
+    if (kiemTra) {
+        alert('Chuỗi đối xứng');
+    } else {
+        alert('Chuỗi không đối xứng');
+    }
+    function doiXung(chuoi) {
+        let dai = chuoi.length - 1;
+        for (let i = 0; i < chuoi.length; i++) {
+            if (chuoi[i] == chuoi[dai]) {
+                dai--;
+                return true
+            } else {
+                return false
+            }
+        }
+    }
+</script>
+</body>
+</html>

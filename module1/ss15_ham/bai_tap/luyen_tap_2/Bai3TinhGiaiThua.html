@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    <label>Tính bình phương</label>
+    <input id="nhapso" type="number" placeholder="Nhập số"
+           oninput="giaiThua(this.value)"
+           onchange="giaiThua(this.value)">
+</p>
+<p>Giai thừa là: <span id="giaithua"></span></p>
+</body>
+<script>
+
+    function giaiThua(so) {
+        so = parseFloat(so);
+        let soGiaiThua = 1
+        if (so<=0) {
+            alert('Nhập số lớn hơn 0');
+        }else {
+            for (let i = 1; i <= so; i++) {
+                document.getElementById("giaithua").innerHTML= soGiaiThua = soGiaiThua * i;
+            }
+        }
+    }
+
+
+</script>
+</body>
+</html>

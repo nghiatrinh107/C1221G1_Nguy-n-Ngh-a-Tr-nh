@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body >
+<script>
+    let nhapGiaTri = prompt('Nhập kí tự cần kiểm tra');
+    let ketQua = xacDinh(nhapGiaTri);
+    alert(ketQua);
+    function xacDinh(nhap) {
+        let kiemTra = isNaN(nhap);
+        if (kiemTra) {
+            return false;
+        }else {
+            return true;
+        }
+    }
+</script>
+</body>
+</html>

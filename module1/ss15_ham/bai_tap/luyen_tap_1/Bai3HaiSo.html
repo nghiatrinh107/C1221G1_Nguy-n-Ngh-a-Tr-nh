@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let soA = parseInt(prompt('Nhập số a:'));
+    let soB = parseInt(prompt('Nhập số b: '));
+    let ketQua = soSanh(soA,soB);
+    function soSanh(x,y) {
+        if(x > y) {
+            alert('Số a > Số b');
+        }else {
+            let tong = x + y ;
+            document.write('Tổng của hai số:  '+ soA + ' + ' + soB + ' = ' + tong);
+        }
+    }
+</script>
+</body>
+</html>
