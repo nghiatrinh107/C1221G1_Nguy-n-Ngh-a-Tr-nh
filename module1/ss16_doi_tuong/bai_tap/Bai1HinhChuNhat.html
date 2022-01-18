@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="canvas" width="100" height="100"></canvas>
+<script>
+    class HinhChuNhat{
+        constructor(dai,rong) {
+            this.dai = dai;
+            this.rong = rong;
+        }
+        setDai(dai){
+            this.dai = dai;
+        }
+        setRong(rong){
+            this.rong = rong;
+        }
+        getDai(){
+            return this.dai;
+        }
+        getRong(){
+            return this.rong;
+        }
+        getDienTich(){
+            return this.dai * this.rong;
+        }
+        getChuVi(){
+            return (this.dai + this.rong)*2;
+        }
+    }
+    let hinhChuNhat = new HinhChuNhat(50,40);
+    let chuVi = hinhChuNhat.getChuVi();
+    let dienTich = hinhChuNhat.getDienTich();
+    let chieuDai = hinhChuNhat.getDai();
+    let chieuRong = hinhChuNhat.getRong();
+    document.write('Chu Vi :  ' + chuVi+'<br>');
+    document.write('Diện tích:  ' +dienTich+'<br>');
+    hinhChuNhat.setDai(80);
+    chuVi = hinhChuNhat.getChuVi();
+    document.write(hinhChuNhat.getDai() + '<br>');
+    document.write('Chu Vi :  ' + chuVi+'<br>');
+    let canvans = document.getElementById('canvas');
+    if(canvans.getContext){
+        let ctx = canvans.getContext('2d');
+        ctx.strokeRect(0,0,chieuDai,chieuRong);
+    }
+</script>
+</body>
+</html>
