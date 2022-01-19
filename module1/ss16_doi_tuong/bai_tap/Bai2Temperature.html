@@ -6,17 +6,47 @@
 </head>
 <body>
 <script>
-    class Temperature {
+    class Temperature{
         constructor(doC) {
             this.doC = doC;
         }
-        soSanh(doC){
-            this.doC = doC;
-            if(this.doC > -273){
-                
+
+        getDoC() {
+            if (this.doC>-273) {
+                return this.doC;
+            }else {
+                alert('Nhập nhiệt độ lớn hơn -273');
+            }
+        }
+
+        setDoC(value) {
+            this.doC = value;
+        }
+        getDoF (){
+            if (this.doC>-273){
+                return ((this.doC*1.8) + 32);
+            }else {
+                alert('Nhập nhiệt độ lớn hơn -273');
+            }
+        }
+        getDoK (){
+            if (this.doC>-273){
+                return this.doC + 273.15;
+            }else {
+                alert('Nhập nhiệt độ lớn hơn -273');
             }
         }
     }
+    let nhietDo = parseInt(prompt('Nhập nhiệt độ'));
+    let temp = new Temperature(nhietDo);
+    let doC = temp.getDoC();
+    let doF =  temp.getDoF();
+    let doK = temp.getDoK();
+    alert('Độ C là:  '+ doC);
+    alert('Độ F là :  '+ doF);
+    alert('Độ K là :  '+ doK)
+
+
 </script>
 </body>
 </html>

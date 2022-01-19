@@ -30,6 +30,11 @@
         getChuVi(){
             return (this.dai + this.rong)*2;
         }
+        dawCanvas(){
+        let canvas = document.getElementById('canvas');
+        let ctx = canvas.getContext('2d');
+        ctx.strokeRect(0,0,this.dai,this.rong);
+        }
     }
     let hinhChuNhat = new HinhChuNhat(50,40);
     let chuVi = hinhChuNhat.getChuVi();
@@ -42,11 +47,7 @@
     chuVi = hinhChuNhat.getChuVi();
     document.write(hinhChuNhat.getDai() + '<br>');
     document.write('Chu Vi :  ' + chuVi+'<br>');
-    let canvans = document.getElementById('canvas');
-    if(canvans.getContext){
-        let ctx = canvans.getContext('2d');
-        ctx.strokeRect(0,0,chieuDai,chieuRong);
-    }
+    document.getElementById('canvas').innerHTML= hinhChuNhat.dawCanvas();
 </script>
 </body>
 </html>
