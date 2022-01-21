@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number;
+    let flag;
+    do {
+        number = prompt("nhâp vào độ dài của mảng");
+        flag = (parseInt(number)==number) && number>0;
+    }while (!flag);
+    number = parseInt(number);
+    let arr = new Array(number);
+    for (let i = 0; i <arr.length ; i++) {
+        arr[i] = parseInt(prompt("nhập phần tử thứ : " + i));
+    }
+    alert(arr);
+    let arr1 =[];
+    let total=0;
+    for (let i = 0; i <arr.length ; i++) {
+        total += arr[i];
+        arr1.push(total);
+    }
+    alert(arr1)
+</script>
+</body>
+</html>

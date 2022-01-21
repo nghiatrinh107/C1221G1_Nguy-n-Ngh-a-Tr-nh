@@ -5,6 +5,17 @@
     <title>Title</title>
 </head>
 <body>
-
+<script>
+    let thuNhap = parseInt(prompt("Thu nhập: "));
+    if (thuNhap <=0) {
+        alert('Nhập số lớn hơn 0');
+    }else if (thuNhap <= 7000000) {
+        alert('Thuế thu nhâp cá nhân:  ' + thuNhap*0.05 + 'VND'+'Lương được nhận' + (thuNhap - thuNhap*0.05));
+    }else if (thuNhap <= 15000000) {
+        alert('Thuế thu nhập cá nhân:   ' + thuNhap * 0.1 + 'VND'+'Lương được nhận' + (thuNhap - thuNhap*0.1));
+    }else {
+        alert('Thuế thu nhập cá nhân:   ' + thuNhap * 0.2 + 'VND'+'Lương được nhận' + (thuNhap - thuNhap*0.2));
+    }
+</script>
 </body>
 </html>

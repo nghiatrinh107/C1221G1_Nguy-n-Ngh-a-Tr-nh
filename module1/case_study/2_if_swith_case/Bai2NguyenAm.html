@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="nhap" size="50px">
+<div id="ketQua"></div>
+<button id="" onclick="kiemTra()">Xác định</button>
+<script>
+    function kiemTra() {
+        let nguyenAm = document.getElementById('nhap').value;
+        switch (nguyenAm) {
+            case 'o':
+            case 'u':
+            case 'i':
+            case 'a':
+            case 'e':
+            case 'O':
+            case 'U':
+            case 'I':
+            case 'A':
+            case 'E':
+                document.getElementById('ketQua').innerHTML =  'Kí tự ' + nguyenAm + ' là nguyên âm' ;
+                break;
+            default:
+                document.getElementById('ketQua').innerHTML = 'Kí tự  ' + nguyenAm + ' là phụ âm';
+        }
+    }
+</script>
+</body>
+</html>
