@@ -5,31 +5,25 @@
     <title>Title</title>
 </head>
 <body>
-<h1>MENU</h1>
-<p>
-    1.Cafe<br>
-    2.Cam vắt<br>
-    3.Nước ép cà rốt<br>
-    4.Nước ép cà chua<br>
-    5.Nước lọc<br>
-    6.Nước dừa<br>
-    7.Thoát
-</p>
-<input type="button" value="Chọn" onclick="chon()">
 <script>
-    function chon() {
-        let luaChon;
-        let soLuong;
-        let soTien;
-        let tongTien=[];
-        do{
-            luaChon = prompt('Nhập lựa chọn đồ uống:');
-            if(luaChon == 1){
-                soLuong = prompt('Nhập số lượng:')
-                soTien =
-            }
-        }while (true);
+    let doUong = ['cafe','cam vắt','nước ép cà rốt','nước ép cà chua','nước lọc','nước dừa'];
+    let gia = [10,20,15,15,10,20];
+    let menu='';
+    let chonDoUong=[];
+    let tongTien=0;
+    for (let i = 0; i <doUong.length ; i++) {
+        menu += '\n'+(i+1)+ '.'+doUong[i]+'   giá   '+gia[i];
     }
+    do{
+        let chon = prompt(menu+'\n'+((doUong.length+1)+'.'+'.thoát'));
+        chonDoUong.push(doUong[chon-1]);
+        if(chon==doUong.length+1){
+            break;
+        }
+        let soLuong = prompt('Nhập số lượng:' + doUong[chon-1]);
+            tongTien+= soLuong * gia[chon-1];
+    }while(true)
+    alert(chonDoUong + 'Tổng tiền thanh toán là:  '+tongTien);
 </script>
 </body>
 </html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="nhapChu">
+<input type="button" value="Chuyển" onclick="chuyen()">
+<script>
+    function chuyen() {
+        let str = document.getElementById('nhapChu').value;
+        let newStr;
+        str = str.replace(/\s+/g,' ').trim();
+        newStr= str.toLowerCase().split(" ");
+        for(let i = 0; i< newStr.length; i++) {
+            newStr[i] = newStr[i][0].toUpperCase() + newStr[i].slice(1);
+        }
+        let max = 0;
+        let viTri= 0;
+        for (let i = 0; i <newStr.length ; i++) {
+            if(max < newStr[i].length) {
+                max = newStr[i].length;
+                viTri = i;
+            }
+        }
+         alert(newStr.join(" ")+ '  Kí tự dài nhất là: ' + newStr[viTri] );
+    }
+</script>
+</body>
+</html>
