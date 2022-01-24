@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number;
+    let number1;
+    let flag;
+    let flag1;
+    do {
+        number = prompt("nhâp vào số hàng của mảng");
+        number1= prompt("Nhập váo số cột của mảng")
+        flag = (parseInt(number)==number) && number>0;
+        flag1 = (parseInt(number1)==number1) && number1>0;
+    }while (!flag);
+    number = parseInt(number);
+    number1 = parseInt(number1)
+    let arr = new Array(number);
+    for (let i = 0; i <number ; i++) {
+        arr[i] = new Array(number);
+        for (let j = 0; j < number1; j++) {
+            arr[i][j] = parseInt(prompt("nhập phần tử thứ : " + j));
+        }
+    }
+    console.log(arr);
+    let sum=0
+    for (let i = 0; i <arr.length ; i++) {
+        for (let j = 0; j <arr[i].length ; j++) {
+            if(arr[i][j]%2 == 0){
+                sum+=arr[i][j];
+            }
+        }
+    }alert(sum)
+</script>
+</body>
+</html>

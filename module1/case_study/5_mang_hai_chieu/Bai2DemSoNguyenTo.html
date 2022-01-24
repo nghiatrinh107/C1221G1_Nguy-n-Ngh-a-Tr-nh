@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number;
+    let number1;
+    let flag;
+    let flag1;
+    do {
+        number = prompt("nhâp vào số hàng của mảng");
+        number1= prompt("Nhập váo số cột của mảng")
+        flag = (parseInt(number)==number) && number>0;
+        flag1 = (parseInt(number1)==number1) && number1>0;
+    }while (!flag);
+    number = parseInt(number);
+    number1 = parseInt(number1)
+    let arr = new Array(number);
+    for (let i = 0; i <number ; i++) {
+        arr[i] = new Array(number);
+        for (let j = 0; j < number1; j++) {
+            arr[i][j] = parseInt(prompt("nhập phần tử thứ : " + j));
+        }
+    }
+    console.log(arr);
+    function isPrime(number) {
+        if(number<=1) return false;
+        else if(number == 2) return true;
+        else if(number %2 == 0 )return false;
+        else {
+            for (i=2; i<number; i++){
+                if(number%i == 0){
+                    return false;
+                }
+            }
+        }
+
+        return true;
+    }
+    let soNguyenTo = [];
+    for (let i = 0; i <arr.length ; i++) {
+        for (let j = 0; j <arr[i].length ; j++) {
+            if(isPrime(arr[i][j]) == true){
+                soNguyenTo.push(arr[i][j]);
+            }
+        }
+    }
+    alert('Số lượng nguyên tố trong mảng là:  ' + soNguyenTo.length + ' Và những số đó là: ' + soNguyenTo  );
+</script>
+</body>
+</html>
