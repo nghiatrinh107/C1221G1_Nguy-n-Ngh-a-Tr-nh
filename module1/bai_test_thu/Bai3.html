@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function fabonacci(num) {
+        let n1 = 0;
+        let n2 = 1;
+        let temp = n1 + n2;
+        let arr = [0];
+        while (temp <= num) {
+            n1 = n2;
+            n2 = temp;
+            temp = n1 + n2;
+            arr.push(n2);
+        }
+        return arr;
+    }
+
+    function kiemTra(arr) {
+        let max = Math.max(...arr);
+        let arr1 = fabonacci(max);
+        let arrFabonacci = [];
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr1.length; j++) {
+                if (arr[i] == arr1[j]) {
+                    arrFabonacci.push(arr[i]);
+                }
+            }
+        }
+        return console.log(arrFabonacci.sort(function (a, b) {return a - b;}));
+    }
+
+    let arr = [1, 5, 6, 13, 9, 12, 8, 0, 5, 1];
+    kiemTra(arr);
+
+</script>
+</body>
+</html>

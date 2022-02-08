@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="maTaiKhoan" placeholder="Mã tài khoản">
+<input type="text" id="tenTaiKhoan" placeholder="Tên chủ tài khoản">
+<input type="text" id="tenNganHang" placeholder="Tên ngân hàng">
+<input type="text" id="tongTien" placeholder="Tổng tiền tài khoản">
+<input type="button" id="themMoi" value="Thêm mới " onclick="themMoi()">
+<p id="ketQua"></p>
+<script>
+    class TaiKhoan {
+        constructor(maTaiKhoan, tenTaiKhoan, tenNganHang, tongTien) {
+            this.maTaiKhoan = maTaiKhoan;
+            this.tenTaiKhoan = tenTaiKhoan;
+            this.tenNganHang = tenNganHang;
+            this.tongTien = tongTien;
+        }
+
+        setMaTaiKhoa(maTaiKhoa) {
+            this.maTaiKhoan = maTaiKhoa;
+        }
+
+        getMaTaiKhoa() {
+            return this.maTaiKhoan;
+        }
+
+        setTenTaiKhoan(tenTaiKhoan) {
+            this.tenTaiKhoan = tenTaiKhoan;
+        }
+
+        getTenTaiKhoan() {
+            return this.tenTaiKhoan;
+        }
+
+        setTenNganHang(tenNganHang) {
+            this.tenNganHang = tenNganHang;
+        }
+
+        getTenNganHang() {
+            return this.tenNganHang;
+        }
+
+        setTongTien(tongTien) {
+            this.tongTien = tongTien;
+        }
+
+        getTongTien() {
+            return this.tongTien;
+        }
+
+        toString() {
+            return "mã tài khoản : " + this.maTaiKhoan + " tên chủ tài khoản : " + this.tenTaiKhoan + " tên ngân hàng: " + this.tenNganHang + "tổng tiền:  " + this.tongTien;
+        }
+    }
+
+    let taiKhoan1 = new TaiKhoan("00001", "Nguyễn Văn A", "Ngân Hàng A", 1000);
+    let taiKhoan2 = new TaiKhoan("00002", "Nguyễn Văn B", "Ngân Hàng B", 2000);
+    let taiKhoan3 = new TaiKhoan("00003", "Nguyễn Văn C", "Ngân Hàng C", 500);
+    let taiKhoan = [taiKhoan1, taiKhoan2, taiKhoan3];
+    hienThi(taiKhoan);
+
+    function themMoi() {
+        let maTaiKhoan = document.getElementById("maTaiKhoan").value;
+        let tenTaiKhoan = document.getElementById("tenTaiKhoan").value;
+        let tenNganHang = document.getElementById("tenNganHang").value;
+        let tongTien = document.getElementById("tongTien").value;
+        let taiKhoanMoi = new TaiKhoan(maTaiKhoan, tenTaiKhoan, tenNganHang, tongTien);
+        taiKhoan.push(taiKhoanMoi);
+        hienThi(taiKhoan);
+        document.getElementById("maTaiKhoan").value = "";
+        document.getElementById("tenTaiKhoan").value = "";
+        document.getElementById("tenNganHang").value = "";
+        document.getElementById("tongTien").value = "";
+    }
+
+    function hienThi(danhSach) {
+        let bang = '<table border="1" style="border-collapse: collapse">\n' +
+            '<tr>\n' +
+            '<th>STT</th>\n' +
+            '<th>Mã tài khoản</th>\n' +
+            '<th>Tên chue tài khoản</th>\n' +
+            '<th>Tên ngân hàng</th>\n' +
+            '<th>Tổng tiền tài khoản</th>\n' +
+            '</tr>';
+        for (let i = 0; i < danhSach.length; i++) {
+            bang += ' <tr>\n' +
+                '<td>' + (i + 1) + '</td>\n' +
+                '<td>' + danhSach[i].getMaTaiKhoa() + '</td>\n' +
+                '<td>' + danhSach[i].getTenTaiKhoan() + '</td>\n' +
+                '<td>' + danhSach[i].getTenNganHang() + '</td>\n' +
+                '<td>' + danhSach[i].getTongTien() + '</td>\n' +
+                '</tr>';
+        }
+        bang += '</table>';
+        document.getElementById("ketQua").innerHTML = bang;
+    }
+</script>
+</body>
+</html>

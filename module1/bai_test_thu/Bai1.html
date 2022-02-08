@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    for (let i = 0; i < 50; i++) {
+        arr[i] = parseInt(prompt("nhập phần tử thứ : " + i));
+    }
+    console.log(arr);
+    let total = 0;
+    let trungBinh = 0;
+    let arr1 = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (i % 3 == 0 && arr[i] % 5 == 0) {
+            arr1.push(arr[i]);
+            total += arr[i];
+            trungBinh = total / arr1.length;
+        }
+    }
+    console.log(arr1);
+    console.log(total);
+    console.log(trungBinh);
+</script>
+</body>
+</html>

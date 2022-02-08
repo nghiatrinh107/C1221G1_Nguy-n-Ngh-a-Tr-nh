@@ -14,7 +14,7 @@
         str = str.replace(/\s+/g,' ').trim();
         newStr= str.toLowerCase().split(" ");
         for(let i = 0; i< newStr.length; i++) {
-            newStr[i] = newStr[i][0].toUpperCase() + newStr[i].slice(1);
+            newStr[i] = newStr[i][0].toUpperCase() +newStr[i].slice(1);
         }
         let max = 0;
         let viTri= 0;
@@ -24,7 +24,7 @@
                 viTri = i;
             }
         }
-         alert(newStr.join(" ")+ '  Kí tự dài nhất là: ' + newStr[viTri] );
+         document.write(newStr.join(" ")+ '  Kí tự dài nhất là: ' + newStr[viTri] );
     }
 </script>
 </body>
