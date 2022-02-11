@@ -6,11 +6,18 @@
 </head>
 <body>
 <script>
-    let arr = [];
-    for (let i = 0; i < 50; i++) {
-        arr[i] = parseInt(prompt("nhập phần tử thứ : " + i));
+    let n;
+    let flag;
+    do {
+        n = prompt("nhâp vào độ dài của mang");
+        flag = (parseInt(n)==n)&& n>0 && n<50;
+    }while (!flag);
+    n = parseInt(n);
+    let arry = new Array(n)
+    for (let i = 0; i <arry.length ; i++) {
+        arry[i] = parseInt(prompt("nhập phần tử thứ : " + i))
     }
-    console.log(arr);
+    alert(arry);
     let total = 0;
     let trungBinh = 0;
     let arr1 = [];
