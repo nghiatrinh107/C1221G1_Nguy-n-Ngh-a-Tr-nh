@@ -19,11 +19,9 @@
             this.tenNganHang = tenNganHang;
             this.tongTien = tongTien;
         }
-
         setMaTaiKhoa(maTaiKhoa) {
             this.maTaiKhoan = maTaiKhoa;
         }
-
         getMaTaiKhoa() {
             return this.maTaiKhoan;
         }
@@ -31,38 +29,30 @@
         setTenTaiKhoan(tenTaiKhoan) {
             this.tenTaiKhoan = tenTaiKhoan;
         }
-
         getTenTaiKhoan() {
             return this.tenTaiKhoan;
         }
-
         setTenNganHang(tenNganHang) {
             this.tenNganHang = tenNganHang;
         }
-
         getTenNganHang() {
             return this.tenNganHang;
         }
-
         setTongTien(tongTien) {
             this.tongTien = tongTien;
         }
-
         getTongTien() {
             return this.tongTien;
         }
-
         toString() {
             return "mã tài khoản : " + this.maTaiKhoan + " tên chủ tài khoản : " + this.tenTaiKhoan + " tên ngân hàng: " + this.tenNganHang + "tổng tiền:  " + this.tongTien;
         }
     }
-
     let taiKhoan1 = new TaiKhoan("00001", "Nguyễn Văn A", "Ngân Hàng A", 1000);
     let taiKhoan2 = new TaiKhoan("00002", "Nguyễn Văn B", "Ngân Hàng B", 2000);
     let taiKhoan3 = new TaiKhoan("00003", "Nguyễn Văn C", "Ngân Hàng C", 500);
     let taiKhoan = [taiKhoan1, taiKhoan2, taiKhoan3];
     hienThi(taiKhoan);
-
     function themMoi() {
         let maTaiKhoan = document.getElementById("maTaiKhoan").value;
         let tenTaiKhoan = document.getElementById("tenTaiKhoan").value;
@@ -76,13 +66,12 @@
         document.getElementById("tenNganHang").value = "";
         document.getElementById("tongTien").value = "";
     }
-
     function hienThi(danhSach) {
         let bang = '<table border="1" style="border-collapse: collapse">\n' +
             '<tr>\n' +
             '<th>STT</th>\n' +
             '<th>Mã tài khoản</th>\n' +
-            '<th>Tên chue tài khoản</th>\n' +
+            '<th>Tên chủ tài khoản</th>\n' +
             '<th>Tên ngân hàng</th>\n' +
             '<th>Tổng tiền tài khoản</th>\n' +
             '</tr>';
